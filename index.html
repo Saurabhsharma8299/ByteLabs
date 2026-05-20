@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="description" content="Byte Labs provides IT education, workshops, internships and project solutions.">
+    <meta name="keywords" content="Byte Labs, IT Education, Internship, AI, Web Development">
+    <meta name="author" content="Saurabh Sharma">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byte Labs | IT Education & Services</title>
+	<link rel="icon" type="image/png" href="srijan.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   <style>
+    html{
+    scroll-behavior:smooth;
+}
+    header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+}
+
+    body{
+    overflow-x:hidden;
+}
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #7c3aed;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --glass: rgba(255, 255, 255, 0.1);
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo i {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            z-index: 1001;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+
+        .hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.5);
+    }
+
+    .hero .container{
+    position:relative;
+    z-index:2;
+    }
+        .hero {
+            padding: 160px 0 100px;
+           min-height: 100vh;
+            background: url(https://static.vecteezy.com/system/resources/previews/011/871/835/non_2x/abstract-technological-background-futuristic-illustration-of-high-computer-and-communication-technologies-on-a-blue-background-high-tech-digital-technology-vector.jpg);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+			opacity:0.9;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+                .project-card img{
+            transition:0.4s;
+        }
+
+        .project-card:hover img{
+            transform:scale(1.05);
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .card p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .card-badge {
+            display: inline-block;
+            padding: 6px 15px;
+            background: var(--light);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        /* Projects Store */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 25px;
+            background: var(--light);
+            border: none;
+            border-radius: 8px;
+            font-weight: 500;
+            color: var(--dark);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-img {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 15px 0;
+        }
+
+        /* Contact Form */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            background: white;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        /* Workshop Form Modal */
+.modal{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modal.active{
+    display: flex;
+}
+
+.modal-box{
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    padding: 25px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-box h2{
+    margin-bottom: 20px;
+    color: var(--primary);
+    text-align: center;
+}
+
+.modal-box input,
+.modal-box select{
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.close-modal{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: red;
+}
+
+@media(max-width:600px){
+    .modal-box{
+        padding:20px;
+    }
+}
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Page Navigation */
+        .page {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Chatbot */
+        .chatbot-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+
+        .chatbot-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chatbot-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .chatbot-window {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+        }
+
+        .chatbot-window.active {
+            display: flex;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-header h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .close-chat {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f8fafc;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            max-width: 80%;
+        }
+
+        .message.bot {
+            margin-right: auto;
+        }
+
+        .message.user {
+            margin-left: auto;
+        }
+
+        .message-content {
+            padding: 12px 18px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+        }
+
+        .message.bot .message-content {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-bottom-left-radius: 5px;
+        }
+
+        .message.user .message-content {
+            background: var(--primary);
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+
+        .chat-input {
+            padding: 20px;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 12px 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 25px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .chat-input input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .send-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .send-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+       /* MOBILE NAVBAR */
+@media (max-width: 992px) {
+
+    .mobile-menu-btn{
+        display:block;
+        z-index:1001;
+    }
+
+    .nav-links{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        z-index: 2000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 20px;
+        padding: 25px 0;
+
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+        max-height: 0;
+        overflow: hidden;
+
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+
+    .nav-links.active{
+        max-height: 700px;
+        opacity: 1;
+    }
+
+    .nav-links a{
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+    .social-icons{
+    display: flex;
+    gap: 20px;
+    }
+
+.icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s ease;
+    border: 2px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Hover Animation */
+.icon:hover{
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 0 25px rgba(255,255,255,0.4);
+}
+
+/* Instagram */
+.instagram{
+    background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+}
+
+/* WhatsApp */
+.whatsapp{
+    background: #25D366;
+}
+
+/* LinkedIn */
+.linkedin{
+    background: #0077B5;
+}
+
+/* GitHub */
+.github{
+    background: #171515;
+}
+
+/* Glow Effect */
+.instagram:hover{
+    box-shadow: 0 0 25px #ff4fd8;
+}
+
+.whatsapp:hover{
+    box-shadow: 0 0 25px #25D366;
+}
+
+.linkedin:hover{
+    box-shadow: 0 0 25px #0077B5;
+}
+
+.github:hover{
+    box-shadow: 0 0 25px #ffffff;
+}
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 140px 0 80px;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .contact-container {
+                padding: 30px 20px;
+            }
+            
+            .chatbot-window {
+                width: 300px;
+                height: 450px;
+                right: -20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .filter-buttons {
+                gap: 10px;
+            }
+            
+            .filter-btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .chatbot-window {
+                width: 280px;
+                right: -40px;
+            }
+        }
+    
+    .card-grid{
+   display:grid;
+   grid-template-columns:1fr 1fr;
+}
+
+@media(max-width:768px){
+   .card-grid{
+      grid-template-columns:1fr;
+   }
+}
+
+
+   
+   </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>Byte Labs</span>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-links" id="navLinks">
+                <a href="#" onclick="showPage('home')">Home</a>
+                <a href="javascript:void(0)" onclick="showPage('about')">About</a>
+                <a href="#" onclick="showPage('workshops')">Workshops</a>
+                <a href="#" onclick="showPage('internship')">Internship</a>
+                <a href="#" onclick="showPage('projects')">Projects</a>
+                <a href="#" onclick="showPage('ai-tech')">AI & Tech</a>
+                <a href="#" onclick="showPage('app-dev')">App Dev</a>
+                <a href="#" onclick="showPage('prompt')">Register</a>
+                <a href="#" onclick="showPage('contact')">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-btn" id="chatbotBtn">
+            <i class="fas fa-robot"></i>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chat-header">
+                <h3><i class="fas fa-robot"></i> Byte Labs Assitant</h3>
+                <button class="close-chat" id="closeChat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="message-content">
+                        Hello! I'm Byte Labs Assitant. How can I help you today?
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Type your message...">
+                <button class="send-btn" id="sendBtn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Page -->
+    <section class="page active" id="home">
+        <div class="hero">
+            <div class="container">
+                <h1>Byte Labs Solutions for the Future</h1>
+                <p>We provide cutting-edge IT education, workshops, internships, and project solutions for students and professionals. Specializing in AI, Machine Learning, and Modern Web Development.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary" onclick="showPage('workshops')">
+                        <i class="fas fa-chalkboard-teacher"></i> Explore Workshops
+                    </a>
+                    <a href="#" class="btn btn-secondary" onclick="showPage('projects')">
+                        <i class="fas fa-shopping-cart"></i> Buy Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive IT solutions tailored for educational and professional growth</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Workshops</h3>
+                    <p>Hands-on technical workshops for BCA, MCA, B.Tech and Computer Science students.</p>
+                    <a href="#" class="btn btn-secondary" onclick="showPage('workshops')">Learn More</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Internships</h3>
+                    <p>Industry-focused internship programs with certification and real-world projects.</p>
+                    <a href="#" class="btn btn-secondary" onclick="showPage('internship')">View Programs</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Solutions</h3>
+                    <p>Custom AI and machine learning solutions for businesses and educational institutions.</p>
+                    <a href="#" class="btn btn-secondary" onclick="showPage('ai-tech')">Explore AI</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Page -->
+    <section class="page" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+                <p>Leading the way in Byte Labs computing education and solutions</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Our Mission</h3>
+                    <p>To democratize Byte Labs computing education and make advanced computational technologies accessible to students and professionals across India.</p>
+                    <div class="card-badge">Empowering Education</div>
+                </div>
+                <div class="card">
+                    <h3>Our Vision</h3>
+                    <p>To become India's premier Byte Labs computing solutions provider, bridging the gap between academic learning and industry requirements.</p>
+                    <div class="card-badge">Future Ready</div>
+                </div>
+                <div class="card">
+                    <h3>Our Values</h3>
+                    <p>Innovation, Excellence, Integrity, and Student Success drive everything we do at Byte Labs.</p>
+                    <div class="card-badge">Core Principles</div>
+                </div>
+            </div>
+            
+            <div class="section-title" style="margin-top: 80px;">
+                <h2>Technology Focus</h2>
+                <p>Specialized expertise in cutting-edge technologies</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-brain"></i>
+                    <h4>Artificial Intelligence</h4>
+                    <p>AI solutions and training</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-microchip"></i>
+                    <h4>Narrow AI Systems</h4>
+                    <p>Specialized AI applications</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-database"></i>
+                    <h4>Hadoop & Big Data</h4>
+                    <p>Big data processing solutions</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Data Analytics</h4>
+                    <p>Analytics and visualization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshops Page -->
+    <section class="page" id="workshops">
+        <div class="container">
+            <div class="section-title">
+                <h2>Workshops</h2>
+                <p>Hands-on technical workshops designed for different academic levels</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-badge">3 Days Workshop</div>
+                    <h3>BCA Workshops</h3>
+                    <p>Web Development, Python Programming, Database Management, and Software Engineering fundamentals.</p>
+                    <a href="#" class="btn btn-primary" onclick="openWorkshopForm('BCA Workshop')">Enroll Now </a>
+                </div>
+                <div class="card">
+                    <div class="card-badge">5 Days Workshop</div>
+                    <h3>MCA Workshops</h3>
+                    <p>Advanced Java, Cloud Computing, Machine Learning, and Project Management methodologies.</p>
+                    <a href="#" class="btn btn-primary" onclick="openWorkshopForm('MCA Workshop')">Enroll Now </a>
+                </div>
+                <div class="card">
+                    <div class="card-badge">4 Days Workshop</div>
+                    <h3>B.Tech Workshops</h3>
+                    <p>AI/ML, IoT, Cybersecurity, Data Structures & Algorithms with industry case studies.</p>
+                    <a href="#" class="btn btn-primary" onclick="openWorkshopForm('B.Tech Workshop')">
+Enroll Now
+</a>
+                </div>
+                <div class="card">
+                    <div class="card-badge">2 Days Workshop</div>
+                    <h3>CS Fundamentals</h3>
+                    <p>Programming basics, OOP concepts, Web Technologies introduction for beginners.</p>
+                    <a href="#" class="btn btn-primary" onclick="openWorkshopForm('CS Fundamentals')">
+Enroll Now
+</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internship Page -->
+    <section class="page" id="internship">
+        <div class="container">
+            <div class="section-title">
+                <h2>Internship Programs</h2>
+                <p>Gain practical experience with our industry-focused internship programs</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-badge">Online • 2 Months</div>
+                    <h3>Web Development</h3>
+                    <p>Full-stack development with MERN stack, responsive design, and deployment.</p>
+                    <div style="display: flex; align-items: center; gap: 10px; margin: 20px 0;">
+                        <i class="fas fa-certificate" style="color: var(--success);"></i>
+                        <span>Certificate Provided</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Apply Now</a>
+                </div>
+                <div class="card">
+                    <div class="card-badge">Offline • 3 Months</div>
+                    <h3>Data Science</h3>
+                    <p>Python, ML algorithms, data visualization, and real-world analytics projects.</p>
+                    <div style="display: flex; align-items: center; gap: 10px; margin: 20px 0;">
+                        <i class="fas fa-certificate" style="color: var(--success);"></i>
+                        <span>Certificate Provided</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Apply Now</a>
+                </div>
+                <div class="card">
+                    <div class="card-badge">Hybrid • 2 Months</div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Neural networks, deep learning, NLP, and AI model deployment.</p>
+                    <div style="display: flex; align-items: center; gap: 10px; margin: 20px 0;">
+                        <i class="fas fa-certificate" style="color: var(--success);"></i>
+                        <span>Certificate Provided</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Apply Now</a>
+                </div>
+                <div class="card">
+                    <div class="card-badge">Online • 1 Month</div>
+                    <h3>Mobile App Development</h3>
+                    <p>Flutter/React Native, UI/UX design, API integration, and app publishing.</p>
+                    <div style="display: flex; align-items: center; gap: 10px; margin: 20px 0;">
+                        <i class="fas fa-certificate" style="color: var(--success);"></i>
+                        <span>Certificate Provided</span>
+                    </div>
+                    <a href="#" class="btn btn-primary">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Page -->
+    <section class="page" id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projects Store</h2>
+                <p>Ready-to-use academic and professional projects with source code</p>
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterProjects('all')">All Projects</button>
+                <button class="filter-btn" onclick="filterProjects('o-level')">O Level</button>
+                <button class="filter-btn" onclick="filterProjects('a-level')">A Level</button>
+                <button class="filter-btn" onclick="filterProjects('bca')">BCA</button>
+                <button class="filter-btn" onclick="filterProjects('cs')">CS/B.Tech</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project cards will be dynamically filtered -->
+                <div class="project-card" data-category="o-level">
+                    <div class="project-img">
+                        <img src="https://media.istockphoto.com/id/1164732448/vector/e-commerce-white-background.jpg?s=170667a&w=0&k=20&c=7s-LdxVKuKFos54o7-vbVLRR4pmDH3lq9XJkK41330Y=" style=" width: 100%; object-fit: cover;
+                         height: 100%;">
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Website</h3>
+                        <p>Complete e-commerce solution with cart, checkout, and admin panel.</p>
+                        <div class="project-price">₹2,499</div>
+                        <a href="#" class="btn btn-primary" onclick="showPage('prompt')">Buy Now</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="a-level">
+                    <div class="project-img">
+                        <img src="https://wallpaperaccess.com/full/9648217.jpg" style=" width: 100%; object-fit: cover; height: 100%;">
+                    </div>
+                    <div class="project-content">
+                        <h3>Hospital Management</h3>
+                        <p>Patient records, appointment scheduling, and billing system.</p>
+                        <div class="project-price">₹3,499</div>
+                        <a href="#" class="btn btn-primary" onclick="showPage('prompt')">Buy Now</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="bca">
+                    <div class="project-img">
+                        <img src="https://images.squarespace-cdn.com/content/v1/6202004c3c7aae13f71fcc18/f491551e-1592-4874-9f80-9adf9c855673/ABI08449-min-1.JPG" style=" width: 100%; object-fit: cover; height: 100%;">
+                    </div>
+                    <div class="project-content">
+                        <h3>Student Portal</h3>
+                        <p>Complete student management system with attendance and grades.</p>
+                        <div class="project-price">₹2,999</div>
+                        <a href="#" class="btn btn-primary" onclick="showPage('prompt')">Buy Now</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="cs">
+                    <div class="project-img">
+                        <img src="https://png.pngtree.com/thumb_back/fw800/background/20241014/pngtree-abstract-low-poly-style-of-artificial-intelligence-chatbot-robot-with-text-image_16387777.jpg" style=" width: 100%; object-fit: cover; height: 100%;">
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Chatbot</h3>
+                        <p>Intelligent chatbot with NLP capabilities for customer service.</p>
+                        <div class="project-price">₹4,999</div>
+                        <a href="#" class="btn btn-primary" onclick="showPage('prompt')">Buy Now</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="o-level">
+                    <div class="project-img">
+                        <img src="https://media.millichronicle.com/2019/03/12123633/Top-50-Nigeria-News-Sites.png" style=" width: 100%; object-fit: cover; height: 100%;" >
+                    </div>
+                    <div class="project-content">
+                        <h3>News Portal</h3>
+                        <p>Dynamic news website with categories and admin dashboard.</p>
+                        <div class="project-price">₹1,999</div>
+                        <a href="#" class="btn btn-primary" onclick="showPage('prompt')">Buy Now</a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="a-level">
+                    <div class="project-img">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.qiKCdr9TYhWuS91kMWKlZgHaEJ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" style=" width: 100%; object-fit: cover; height: 100%;" >
+                    </div>
+                    <div class="project-content">
+                        <h3>Travel Booking</h3>
+                        <p>Flight and hotel booking system with payment integration.</p>
+                        <div class="project-price">₹3,999</div>
+                        <a href="#" class="btn btn-primary" onclick="showPage('prompt')">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <form id="projectForm" onsubmit="sendProjectWhatsApp(event)">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="father" placeholder="Father Name" required>
+    <input type="text" id="mother" placeholder="Mother Name" required>
+    <input type="tel" id="mobile" placeholder="Mobile Number" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="text" id="college" placeholder="College Name" required>
+
+    <select id="tech" required>
+        <option value="">Select Technology</option>
+        <option>PHP</option>
+        <option>Python</option>
+        <option>Hadoop</option>
+        <option>Java</option>
+        <option>C/C++</option>
+        <option>Web Development</option>
+        <option>AI/ML</option>
+        <option>Android</option>
+        <option>Database</option>
+        <option>Cloud</option>
+        <option>Other</option>
+    </select>
+
+    <textarea id="details" placeholder="Project Details" required></textarea>
+
+    <button type="submit" class="btn btn-primary">Register Now</button>
+</form>
+
+    <!-- AI & Tech Page -->
+    <section class="page" id="ai-tech">
+        <div class="container">
+            <div class="section-title">
+                <h2>AI & Technology</h2>
+                <p>Cutting-edge AI solutions and technology services</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Custom AI solutions, chatbot development, and intelligent automation systems for businesses.</p>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h3>Narrow AI Systems</h3>
+                    <p>Specialized AI applications for specific tasks like image recognition, speech processing, and predictive analytics.</p>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Hadoop & Big Data</h3>
+                    <p>Big data processing, analytics, and distributed computing solutions using Hadoop ecosystem.</p>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>ML & Data Analytics</h3>
+                    <p>Machine learning models, data visualization, and business intelligence dashboards.</p>
+                    <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Dev Page -->
+    <section class="page" id="app-dev">
+        <div class="container">
+            <div class="section-title">
+                <h2>App & Web Development</h2>
+                <p>Custom software, web, and mobile application development services</p>
+            </div>
+            
+            <div class="card" style="margin-bottom: 40px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                    <div>
+                        <h3>Mobile App Development</h3>
+                        <p>We create cross-platform and native mobile applications for iOS and Android using modern frameworks like Flutter, React Native, and Swift.</p>
+                        <ul style="margin: 20px 0; list-style: none;">
+                            <li><i class="fas fa-check" style="color: var(--success); margin-right: 10px;"></i> Custom UI/UX Design</li>
+                            <li><i class="fas fa-check" style="color: var(--success); margin-right: 10px;"></i> API Integration</li>
+                            <li><i class="fas fa-check" style="color: var(--success); margin-right: 10px;"></i> App Store Deployment</li>
+                            <li><i class="fas fa-check" style="color: var(--success); margin-right: 10px;"></i> Maintenance & Support</li>
+                        </ul>
+                    </div>
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 250px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                        <img src="https://img.freepik.com/free-vector/app-development-banner_33099-1720.jpg" style="width: 100%; object-fit: cover; overflow: hidden; height: 99%; ">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-globe"></i>
+                    <h4>Web Development</h4>
+                    <p>Responsive websites and web applications</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h4>E-Commerce</h4>
+                    <p>Online stores and payment systems</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cogs"></i>
+                    <h4>Custom Software</h4>
+                    <p>Tailored business solutions</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h4>UI/UX Design</h4>
+                    <p>User interface and experience design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prompt Request Page -->
+    <section class="page" id="prompt">
+        <div class="container">
+            <div class="section-title">
+                <h2>Prompt Based Request</h2>
+                <p>Describe your project requirement and we'll create a custom solution</p>
+            </div>
+            
+            <div class="card" style="max-width: 800px; margin: 0 auto;">
+                <h3 style="text-align: center; margin-bottom: 30px;">Tell Us About Your Project</h3>
+                
+                <div style="margin-bottom: 30px;">
+                    <label style="display: block; margin-bottom: 10px; font-weight: 500;">Your Name</label>
+                    <input type="text" id="projectName" placeholder="Enter your name" style="width: 100%; padding: 15px; border: 1px solid #e2e8f0; border-radius: 8px;">
+                </div>
+                
+                <div style="margin-bottom: 30px;">
+                    <label style="display: block; margin-bottom: 10px; font-weight: 500;">Your Email</label>
+                    <input type="email" id="projectEmail" placeholder="Enter your email" style="width: 100%; padding: 15px; border: 1px solid #e2e8f0; border-radius: 8px;">
+                </div>
+                
+                <div style="margin-bottom: 30px;">
+                    <label style="display: block; margin-bottom: 10px; font-weight: 500;">Project Type</label>
+                    <select id="projectType"style="width: 100%; padding: 15px; border: 1px solid #e2e8f0; border-radius: 8px;">
+                        <option>Select project type</option>
+                        <option>Website Development</option>
+                        <option>Mobile App</option>
+                        <option>Desktop Software</option>
+                        <option>AI/ML Solution</option>
+                        <option>Academic Project</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                
+                <div style="margin-bottom: 30px;">
+                    <label style="display: block; margin-bottom: 10px; font-weight: 500;">Describe Your Requirement</label>
+                    <textarea id="projectRequirement" placeholder="Describe your project in detail. Include features, technologies, timeline, and any specific requirements." rows="6" style="width: 100%; padding: 15px; border: 1px solid #e2e8f0; border-radius: 8px; font-family: 'Poppins', sans-serif;"></textarea>
+                </div>
+                
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+                    <h4><i class="fas fa-info-circle" style="color: var(--primary); margin-right: 10px;"></i> Information</h4>
+                    <p style="margin-top: 10px; color: var(--gray);">Please provide as much detail as possible about your requirements. Our team will review your request and contact you with a customized proposal within 24 hours.</p>
+                </div>
+                
+               <button class="btn btn-primary" style="width: 100%;" onclick="sendProjectRequest()">
+                    <i class="fas fa-paper-plane"></i> Submit Request
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section class="page" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for inquiries, collaborations, or support</p>
+            </div>
+            
+            <div class="contact-container">
+                <div>
+                    <h3 style="margin-bottom: 30px;">Get In Touch</h3>
+                    <p style="margin-bottom: 30px;">Have questions about our services? Ready to start your next project? Contact us today!</p>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h4><i class="fas fa-map-marker-alt" style="color: var(--primary); margin-right: 10px;"></i> Our Location</h4>
+                        <p style="margin-top: 10px;">Tech Park, Sector 62, Noida, Uttar Pradesh 201309</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h4><i class="fas fa-phone" style="color: var(--primary); margin-right: 10px;"></i> Phone Number</h4>
+                        <p style="margin-top: 10px;">8299552791</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h4><i class="fas fa-envelope" style="color: var(--primary); margin-right: 10px;"></i> Email Address</h4>
+                        <p style="margin-top: 10px;">saurabhmar05@gmail.com</p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 30px;">Send Message</h3>
+
+                    <input type="text" id="c_name" placeholder="Your Name" required>
+                    <input type="email" id="c_email" placeholder="Your Email" required>
+                    <input type="text" id="c_subject" placeholder="Subject" required>
+                    <textarea id="c_message" placeholder="Your Message" rows="5" required></textarea>
+
+                    <button class="btn btn-primary" style="width: 100%;" onclick="sendContactWhatsApp()">
+                        Send Message
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Byte Labs</h3>
+                    <p>Leading provider of IT education, workshops, internships, and project solutions. Specializing in AI, ML, and modern web technologies.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showPage('home')">Home</a></li>
+                        <li><a href="#" onclick="showPage('about')">About Us</a></li>
+                        <li><a href="#" onclick="showPage('workshops')">Workshops</a></li>
+                        <li><a href="#" onclick="showPage('internship')">Internship</a></li>
+                        <li><a href="#" onclick="showPage('projects')">Projects Store</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showPage('ai-tech')">AI Solutions</a></li>
+                        <li><a href="#" onclick="showPage('app-dev')">App Development</a></li>
+                        <li><a href="#" onclick="showPage('prompt')">Custom Projects</a></li>
+                        <li><a href="#" onclick="showPage('workshops')">Technical Training</a></li>
+                        <li><a href="#" onclick="showPage('internship')">Internship Programs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Pandar , Jasra Prayagraj, Uttar Pradesh</p>
+                    <p><i class="fas fa-phone" style="margin-right: 10px;"></i> +91 8299552791</p>
+                    <p><i class="fas fa-envelope" style="margin-right: 10px;"></i> saurabhmar05@gmail.com</p>
+                    
+                 <div class="social-icons">
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/hackerworld9879" target="_blank" class="icon instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/918299552791" target="_blank" class="icon whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/saurabh-sharma-593080340" target="_blank" class="icon linkedin">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/Saurabhsharma8299" target="_blank" class="icon github">
+            <i class="fab fa-github"></i>
+        </a>
+
+    </div>
+         </div>
+              </div>
+                
+            
+            <div class="copyright">
+                <p>&copy; 2026 Byte Labs. All rights reserved. | Designed By Saurabh Sharma for IT Education & Services</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+function sendProjectWhatsApp(e){
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const father = document.getElementById("father").value;
+    const mother = document.getElementById("mother").value;
+    const mobile = document.getElementById("mobile").value;
+    const email = document.getElementById("email").value;
+    const college = document.getElementById("college").value;
+    const tech = document.getElementById("tech").value;
+    const details = document.getElementById("details").value;
+
+    const message =
+`📌 New Project Registration
+
+Name: ${name}
+Father Name: ${father}
+Mother Name: ${mother}
+Mobile: ${mobile}
+Email: ${email}
+College: ${college}
+Technology: ${tech}
+Project Details: ${details}`;
+
+    alert("Team jald hi aapka project delivery kar degi.");
+
+    window.open(
+      `https://wa.me/918299552791?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
+}
+
+        // Mobile Menu Toggle
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+
+mobileMenuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+        // Page Navigation
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Close mobile menu if open
+            document.getElementById('navLinks').classList.remove('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+            
+            return false;
+        }
+
+        // Chatbot Functionality
+        const chatbotBtn = document.getElementById('chatbotBtn');
+        const chatbotWindow = document.getElementById('chatbotWindow');
+        const closeChat = document.getElementById('closeChat');
+        const sendBtn = document.getElementById('sendBtn');
+        const chatInput = document.getElementById('chatInput');
+        const chatMessages = document.getElementById('chatMessages');
+
+        chatbotBtn.addEventListener('click', () => {
+            chatbotWindow.classList.toggle('active');
+        });
+
+        closeChat.addEventListener('click', () => {
+            chatbotWindow.classList.remove('active');
+        });
+
+        sendBtn.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (!message) return;
+
+            // Add user message
+            addMessage(message, 'user');
+            chatInput.value = '';
+
+            // Simulate bot response after delay
+            setTimeout(() => {
+                const responses = [
+                    "Thanks for your message! How can I assist you with our services today?",
+                    "I'd be happy to help! Are you interested in workshops, internships, or projects?",
+                    "Our team will get back to you shortly. In the meantime, you can explore our website for more information.",
+                    "That's a great question! Let me connect you with the right department for assistance.",
+                    "You can check our Projects Store for ready-to-use solutions or request a custom project via the Prompt Request page."
+                ];
+                const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                addMessage(randomResponse, 'bot');
+            }, 1000);
+        }
+
+        function addMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message', sender);
+            
+            const contentDiv = document.createElement('div');
+            contentDiv.classList.add('message-content');
+            contentDiv.textContent = text;
+            
+            messageDiv.appendChild(contentDiv);
+            chatMessages.appendChild(messageDiv);
+            
+            // Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Project Filtering
+        function filterProjects(category) {
+            // Update active filter button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.toLowerCase().includes(category) || (category === 'all' && btn.textContent === 'All Projects')) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Filter project cards
+            document.querySelectorAll('.project-card').forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Project Request WhatsApp
+
+function sendProjectRequest(){
+
+    let name = document.getElementById('projectName').value;
+    let email = document.getElementById('projectEmail').value;
+    let type = document.getElementById('projectType').value;
+    let requirement = document.getElementById('projectRequirement').value;
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+if(!email.match(emailPattern)){
+    alert("Enter valid email");
+    return;
+}
+
+    if(!name || !email || type === "Select project type" || !requirement){
+        alert("Please fill all details");
+        return;
+    }
+
+    let message =
+`*New Project Request*%0A%0A
+👤 Name: ${name}%0A
+📧 Email: ${email}%0A
+💻 Project Type: ${type}%0A
+📝 Requirement:%0A${requirement}`;
+
+    let whatsappURL = `https://wa.me/918299552791?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, '_blank');
+}
+
+        // Initialize with home page active
+        document.addEventListener('DOMContentLoaded', function() {
+            showPage('home');
+            
+            // Add some sample chatbot messages
+            setTimeout(() => {
+                addMessage("Welcome to Byte Labs! I'm here to help you with information about our services, workshops, and projects.", 'bot');
+            }, 1500);
+        });
+
+        // Workshop Modal
+
+function openWorkshopForm(workshop){
+
+    document.getElementById('workshopModal').classList.add('active');
+
+    document.getElementById('workshopName').value = workshop;
+}
+
+function closeModal(){
+    document.getElementById('workshopModal').classList.remove('active');
+}
+
+// Submit Form To WhatsApp
+
+function submitWorkshopForm(){
+
+    let name = document.getElementById('studentName').value;
+    let father = document.getElementById('fatherName').value;
+    let mother = document.getElementById('motherName').value;
+    let mobile = document.getElementById('mobileNumber').value;
+    let email = document.getElementById('emailAddress').value;
+    let college = document.getElementById('collegeName').value;
+    let workshop = document.getElementById('workshopName').value;
+
+    if(!name || !father || !mother || !mobile || !email || !college || !workshop){
+        alert("Please fill all details");
+        return;
+    }
+
+    let message =
+`*New Workshop Registration*%0A%0A
+👤 Name: ${name}%0A
+👨 Father Name: ${father}%0A
+👩 Mother Name: ${mother}%0A
+📱 Mobile: ${mobile}%0A
+📧 Email: ${email}%0A
+🏫 College: ${college}%0A
+🎓 Workshop: ${workshop}`;
+
+    let whatsappURL = `https://wa.me/918299552791?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, '_blank');
+}
+
+function sendContactWhatsApp(){
+
+    const name = document.getElementById("c_name").value;
+    const email = document.getElementById("c_email").value;
+    const subject = document.getElementById("c_subject").value;
+    const message = document.getElementById("c_message").value;
+
+    if(!name || !email || !subject || !message){
+        alert("Please fill all details");
+        return;
+    }
+
+    const whatsappMessage =
+`📩 New Contact Message
+
+👤 Name: ${name}
+📧 Email: ${email}
+📌 Subject: ${subject}
+💬 Message: ${message}`;
+
+    const url = `https://wa.me/918299552791?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(url, "_blank");
+}
+
+document.addEventListener("keydown", function(e) {
+    if (e.key === "F12" || 
+        (e.ctrlKey && e.shiftKey && e.key === "I") ||
+        (e.ctrlKey && e.shiftKey && e.key === "J") ||
+        (e.ctrlKey && e.key === "U")) {
+        e.preventDefault();
+        alert("Inspect disabled!");
+    }
+});
+    </script>
+    <!-- Workshop Registration Modal -->
+
+<div class="modal" id="workshopModal">
+
+    <div class="modal-box">
+
+        <span class="close-modal" onclick="closeModal()">
+            <i class="fas fa-times"></i>
+        </span>
+
+        <h2>Workshop Registration</h2>
+
+        <input type="text" id="studentName" placeholder="Student Name">
+
+        <input type="text" id="fatherName" placeholder="Father Name">
+
+        <input type="text" id="motherName" placeholder="Mother Name">
+
+        <input type="tel" id="mobileNumber" placeholder="Mobile Number">
+
+        <input type="email" id="emailAddress" placeholder="Email Address">
+
+        <input type="text" id="collegeName" placeholder="College Name">
+
+        <select id="workshopName">
+            <option value="">Select Workshop</option>
+            <option>BCA Workshop</option>
+            <option>MCA Workshop</option>
+            <option>B.Tech Workshop</option>
+            <option>CS Fundamentals</option>
+        </select>
+
+        <button class="btn btn-primary" style="width:100%;" onclick="submitWorkshopForm()">
+            Submit Registration
+        </button>
+
+    </div>
+
+</div>
+</body>
+</html>
