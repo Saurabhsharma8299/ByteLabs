@@ -838,6 +838,27 @@
             transform: scale(1.05);
         }
 
+        .ad-container {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 120px;
+    margin: 35px auto;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    overflow: hidden;
+}
+
+.ad-label {
+    display: block;
+    font-size: 11px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
         /* ===== ANIMATIONS ===== */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -1011,6 +1032,22 @@
         </div>
     </div>
 
+    <!-- Advertisement -->
+<div class="ad-container">
+    <span class="ad-label">Advertisement</span>
+
+    <!-- Ad Network Code -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+         data-ad-slot="XXXXXXXXXX"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
     <!-- Quick Pricing Preview on Home -->
     <div class="container" style="margin-top: 80px;">
         <div class="section-title">
